@@ -74,8 +74,8 @@
 //
 //	while (!_kbhit()) {
 //		system("cls");
-//		_strdate_s(_date, 10);
-//		_strtime_s(_time, 10);
+//		_strdate(_date, 10);
+//		_strtime(_time, 10);
 //
 //		printf("%s \n", _date);
 //		printf("%s \n", _time);
@@ -83,19 +83,25 @@
 //	}
 //}
 
-void main() {
-	int M[] = { 5,9,2,7,1,10,4,6,8,3 };
-	for (int i = 0;i < sizeof(M) / sizeof(int);i++) {
-		printf("before \n");
-		printf("M[%d] = %d \n", i, M[i]);
-	}
-	bubblesort(M, sizeof(M) / sizeof(int));
-
-	for (int j = 0;j < sizeof(M) / sizeof(int);j++) {
-		printf("after \n");
-		printf("M[%d] = %d \n", j, M[j]);
-	}
-}
+//void main() {
+//	int M[] = { 5,9,2,7,1,10,4,6,8,3 };
+//	printf("before \n");
+//	for (int i = 0;i < sizeof(M) / sizeof(int);i++) {
+//		printf("M[%d] = %d \n", i, M[i]);
+//	}
+//	bubblesort_upper(M, sizeof(M) / sizeof(int));
+//	printf("upper \n");
+//	for (int j = 0;j < sizeof(M) / sizeof(int);j++) {
+//		printf("M[%d] = %d \n", j, M[j]);
+//	}
+//
+//
+//	bubblesort_lower(M, sizeof(M) / sizeof(int));
+//	printf("lower \n");
+//	for (int k = 0;k < sizeof(M) / sizeof(int);k++) {
+//		printf("M[%d] = %d \n", k, M[k]);
+//	}
+//}
 
 //void main() {
 //	FILE* fp_r = fopen("c:\\Temp\\in.txt", "r");
