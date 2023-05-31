@@ -116,3 +116,26 @@
 //	fclose(fp_r);
 //	fclose(fp_w);
 //}
+
+void main() {
+	while (!_kbhit()) {
+	srand(time(NULL));
+		int num, result[6] = { 0 }, flag[45] = { 0 };
+	system("cls");
+		for (int i = 0;i < 6;i++) {
+			num = rand() & 45;
+			if (flag[num] == 1) {
+				i--;
+			}
+			else {
+				result[i] = num;
+				flag[num] = 1;
+			}
+		}
+		for (int j = 0;j < 6;j++) {
+			printf("%5d", result[j] + 1);
+		}
+		printf("\n");
+		Sleep(1000);
+	}
+}
