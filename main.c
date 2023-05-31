@@ -117,25 +117,63 @@
 //	fclose(fp_w);
 //}
 
+//void main() {
+//	while (!_kbhit()) {
+//	srand(time(NULL));
+//		int num, result[6] = { 0 }, flag[45] = { 0 };
+//	system("cls");
+//		for (int i = 0;i < 6;i++) {
+//			num = rand() % 45;
+//			if (flag[num] == 1) {
+//				i--;
+//			}
+//			else {
+//				result[i] = num;
+//				flag[num] = 1;
+//			}
+//		}
+//		for (int j = 0;j < 6;j++) {
+//			printf("%5d", result[j] + 1);
+//		}
+//		printf("\n");
+//		Sleep(1000);
+//	}
+//}
+
 void main() {
-	while (!_kbhit()) {
+	int human, com;
 	srand(time(NULL));
-		int num, result[6] = { 0 }, flag[45] = { 0 };
-	system("cls");
-		for (int i = 0;i < 6;i++) {
-			num = rand() & 45;
-			if (flag[num] == 1) {
-				i--;
-			}
-			else {
-				result[i] = num;
-				flag[num] = 1;
+	while (1) {
+		scanf("%d", &human);
+		com = rand() % 3 + 1;
+		getchar();
+		if (human == 1) {
+			printf("YOU : °¡À§ ");
+			switch (com) {
+			case 1: printf("COM : °¡À§  ");printf("ºñ±è\n");break;
+			case 2:printf("COM : ¹ÙÀ§  ");printf(" Áü\n");break;
+			case 3:printf("COM : º¸   ");printf("ÀÌ±è\n");break;
+			default: break;
 			}
 		}
-		for (int j = 0;j < 6;j++) {
-			printf("%5d", result[j] + 1);
+		else if (human == 2) {
+			printf("YOU : ¹ÙÀ§ ");
+			switch (com) {
+			case 1: printf("COM : °¡À§  ");printf("ÀÌ±è\n");break;
+			case 2:printf("COM : ¹ÙÀ§  ");printf("ºñ±è\n");break;
+			case 3:printf("COM : º¸   ");printf(" Áü\n");break;
+			default: break;
+			}
 		}
-		printf("\n");
-		Sleep(1000);
+		else if (human == 3) {
+			printf("YOU : º¸   ");
+			switch (com) {
+			case 1: printf("COM : °¡À§  ");printf("ÀÌ±è\n");break;
+			case 2:printf("COM : ¹ÙÀ§  ");printf(" Áü\n");break;
+			case 3:printf("COM : º¸   ");printf("ºñ±è\n");break;
+			default: break;
+			}
+		}
+		else printf("ÀçÀÔ·Â\n");
 	}
 }
